@@ -1,0 +1,95 @@
+.main_header {
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    color: white;
+    background-color: rgba(217, 69, 240, 0.8);
+    width: 100%;
+    height: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+
+.main_header button{
+    color: white;
+    background-color: rgba(70, 70, 70, 1);
+    border-radius: 5px;
+    border: 1px solid rgba(217, 69, 240, 0.8);
+/* Поля ввода и кнопка занимают всю ширину блока */
+    padding: 10px; /* Добавляем внутренние отступы */
+
+}
+
+.logout_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.auth_block{
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgba(217, 69, 240, 0.8);
+    width: 400px;
+    max-height: fit-content;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+div.auth_block input {
+    color: white;
+    background-color: rgba(70, 70, 70, 1);
+    border-radius: 5px;
+    border: 1px solid rgba(217, 69, 240, 0.8);
+    width: 100%; /* Поля ввода и кнопка занимают всю ширину блока */
+    padding: 10px; /* Добавляем внутренние отступы */
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Добавляем нижний отступ */
+}
+
+
+div.auth_block button {
+    color: white;
+    background-color: rgba(70, 70, 70, 1);
+    border-radius: 5px;
+    border: 1px solid rgba(217, 69, 240, 0.547);
+    width: 100%; /* Поля ввода и кнопка занимают всю ширину блока */
+    padding: 10px; /* Добавляем внутренние отступы */
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Добавляем нижний отступ */
+}
+
+
+
+div.auth_block
+  p{
+    font-size: 14px;
+    color: red;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0; /* Убираем внешние отступы */
+    box-sizing: border-box;
+    width: 100%; /* Сообщения об ошибках занимают всю ширину блока */
+}
+
+div.auth_block:first-child{
+    text-align: center;
+}
+
+.login_form {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+

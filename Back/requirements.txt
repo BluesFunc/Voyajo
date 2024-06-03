@@ -1,0 +1,11 @@
+fastapi
+pydantic
+fastapi-sqlalchemy
+sqlalchemy-utils
+alembic
+uvicorn
+jinja2
+python-multipart
+passlib
+pyjwt
+psycopg2

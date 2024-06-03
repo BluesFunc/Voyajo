@@ -1,0 +1,30 @@
+html, body { height: 100%; width: 100%; }
+
+
+
+
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(70, 70, 70, 1);
+    color: white;
+    font-family: "Montserrt";
+    font-size: large;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+a:visited {
+    color: inherit;
+  }
+
+a:hover{
+    color: #88CDFF;
+    transition: 0.5s;
+}
