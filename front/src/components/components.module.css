@@ -93,3 +93,13 @@ div.auth_block:first-child{
 
 
 
+.content_block  {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.table_header {
+    font-size: large;
+    display: flex;
+    justify-content: space-evenly;
+}

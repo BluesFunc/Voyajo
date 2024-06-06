@@ -11,7 +11,10 @@ export const request_sender = axios.create({
 )
 
 export default function logout(){
-    const location = useLocation
-    localStorage.removeItem("UserToken")
-    location('/')
+    localStorage.removeItem("User")
+    localStorage.removeItem("UserRole")
+    localStorage.removeItem("RoleID")
+    window.location.reload()
+    return redirect('//')
 }
+

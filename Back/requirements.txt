@@ -9,3 +9,4 @@ python-multipart
 passlib
 pyjwt
 psycopg2
+babel

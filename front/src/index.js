@@ -9,7 +9,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import BasePage from './pages/BasePage'
 import LoginPage from './pages/LoginPage';
 import RegPage from './pages/RegPage';
+import AdminPage from './pages/AdminPage';
+
+
 import './index.css'
+import CustomerPage from './pages/CustomerPage';
+import ExtranetPage from './pages/ExtranetPage';
+import Company_block from './components/company_block';
+import { companies_loader } from './utils/loaders';
+import { CompanyForm } from './components/extranet_forms';
 
 const router = createBrowserRouter([
   {
@@ -22,11 +30,40 @@ const router = createBrowserRouter([
       },
       {
         path: "reg/",
-        element: <RegPage/>
+        element: <RegPage />
       }
     ],
-
   },
+  {
+    path: '/admin',
+    element: <AdminPage />
+  },
+  {
+    path: '/customer',
+    element: <CustomerPage />,
+    children: [
+      {
+        path: ':id',
+      }
+    ]
+  },
+  {
+    path: '/extranet',
+    element: <ExtranetPage />,
+    children: [
+      {
+        path: ':id',
+        element: <Company_block />,
+        loader: companies_loader
+      },
+      {
+        path: ':id/company/add',
+        element: <CompanyForm />,
+      },
+     
+
+    ]
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -7,26 +7,26 @@ import logout from "./functions";
 
 
 export default function Header() {
-    const user_token = localStorage.getItem("UserToken")
-
-
+    const user = localStorage.getItem("User")
+    const role = localStorage.getItem("UserRole")
+    const role_id = localStorage.getItem('RoleID')
 
     return (
-        <nav className={styles.main_header}>
+        <div className={styles.main_header}>
             <Link to="/">Главная</Link>
-            <Link>Избранное</Link>
+            {role == 'customer' && <Link to='/tickets'>Билеты</Link>}
             {
-                user_token 
+                user 
                 ? (
                     <div className={styles.logout_block}>
-                    <Link to="/">{user_token}</Link>
+                    <Link to={'/' + role + '/' + role_id}>{user}</Link>
                     <button onClick={logout}>Выйти</button>
                     </div>
                 ) 
                 : (<Link to="/login">Войти</Link>)    
 
             }
-        </nav>
+        </div>
     );
 
 

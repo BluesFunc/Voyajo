@@ -29,7 +29,9 @@ export default function RegForm() {
       )
        .then( (response) => {
         console.log(response.data)
+        localStorage.setItem("UserToken", response.data.username)
         navigate("/")
+        window.location.reload()
        })
        .catch( (errors) => {
         if (errors.response) {
